@@ -20,7 +20,7 @@ function ContactForm({ onClose }) {
 
     const data = { name, phone: number };
     if (
-      contacts.find(
+     contacts.find(
         contact => contact.name.toLowerCase() === name.toLowerCase()
       )
     ) {
