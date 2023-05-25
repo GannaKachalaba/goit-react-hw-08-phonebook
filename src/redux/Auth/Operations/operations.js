@@ -1,8 +1,8 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-axios.defaults.baseURL = 'https://goit-task-manager.herokuapp.com/';
-// axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
+
+axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 
 const token = {
   set(token) {
@@ -54,6 +54,8 @@ const refreshUser = createAsyncThunk('auth/refresh', async (_, thunkAPI) => {
   const state = thunkAPI.getState();
   const persistedToken = state.auth.token;
 
+  console.log("persistedToken", persistedToken);
+
   if (persistedToken === null) {
     return thunkAPI.rejectWithValue();
   }
@@ -61,8 +63,7 @@ const refreshUser = createAsyncThunk('auth/refresh', async (_, thunkAPI) => {
   token.set(persistedToken);
 
   try {
-    // const { data } = await axios.get('/users/current');
-    const { data } = await axios.get('users/me');
+    const { data } = await axios.get('/users/current');
     return data;
   } catch (error) {
     return thunkAPI.rejectWithValue();
