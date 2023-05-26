@@ -28,7 +28,7 @@ function ContactList() {
   return (
     <ul>
       {contacts &&
-        filterList.map(({ id, name, phone: number }) => {
+        filterList.map(({ id, name, number }) => {
           return (
             <li className={css.item} key={id}>
               <Contact name={name} number={number} id={id} />

@@ -9,3 +9,13 @@
   .link.active {
     color: #e84a5f;
   }
+
+  .text {
+   color: green;
+   font-size: 30px;
+  }
+  
+  .text_pink {
+    color: fuchsia;
+    font-size: 30px;
+   }

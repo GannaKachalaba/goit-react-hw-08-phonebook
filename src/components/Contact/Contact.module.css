@@ -56,7 +56,8 @@
   
     border: none;
     border-radius: 5px;
-    background-color: #2b2b2b;
+    
+    background-color: var(--accent-bg-color);
     color: var(--second-text-color);
   
     cursor: pointer;
@@ -65,5 +66,5 @@
   
   .button:hover,
   .button:focus {
-    background-color: var(--accent-bg-color);
+    background-color: #2b2b2b;
   }
