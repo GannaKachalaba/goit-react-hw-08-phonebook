@@ -1,5 +1,4 @@
-import css from './Home.module.css';
-import phonebook from '../imag/phonebook.jpg';
+import homeBg from '../imag/homeBg.jpg';
 const styles = {
   container: {
     background: 'pink',
@@ -8,22 +7,12 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
   },
-  title: {
-    color: 'green',
-    fontWeight: 800,
-    fontSize: 55,
-    textAlign: 'center',
-    marginRight: 50,
-  },
 };
 
 export default function Home() {
   return (
     <div style={styles.container}>
-       <h1 className={css.title}>
-        Phone<span className={css.title__color}>book</span>
-      </h1>
-      <img src={phonebook} alt="phonebook" />
+      <img src={homeBg} alt="homeBg" />
     </div>
   );
 }

@@ -8,7 +8,7 @@ export const AuthNav = () => {
         <span className={css.text}>Register</span>
       </NavLink>
       <NavLink className={css.link} to="/login">
-        <span className={css.text}>Log In</span>
+        <span className={css.text}>Login</span>
       </NavLink>
     </div>
   );

@@ -2,7 +2,6 @@ import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import Notiflix from 'notiflix';
 
-
 axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 
 const token = {
@@ -26,7 +25,7 @@ const register = createAsyncThunk(
       return data;
     } catch (error) {
       Notiflix.Notify.failure('SORRY, REGISTRATION WAS REFUSED');
-      return  thunkAPI.rejectWithValue(error.message);
+      return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
@@ -59,7 +58,6 @@ const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
 const refreshUser = createAsyncThunk('auth/refresh', async (_, thunkAPI) => {
   const state = thunkAPI.getState();
   const persistedToken = state.auth.token;
-
 
   if (persistedToken === null) {
     return thunkAPI.rejectWithValue();

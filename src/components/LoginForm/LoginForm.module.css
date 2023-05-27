@@ -1,39 +1,57 @@
 .form {
-    width: 320px;
-  
-  }
-  
-  .label {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 16px;
+  max-width: 1400px;
+  margin: 0px auto;
+  padding: 0px 16px;
+}
 
-  }
+.label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
 
+.input {
+  height: 40px;
+  padding: 0 10px 0 10px;
+  font-size: 14px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100px;
+  height: 40px;
+  margin-bottom: 50px;
+  padding: 0 10px 0 10px;
+
+  background-color: var(--accent-bg-color);
+  color: var(--second-text-color);
+  font-family: inherit;
+  border: none;
+
+  cursor: pointer;
+  transition: background-color var(--main-hover-animation);
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--main-text-color);
+}
+
+.button__text {
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 768px) {
   .button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    width: 320px;
-    height: 30px;
-    margin-bottom: 50px;
-  
-    background-color: var(--accent-bg-color);
-    color: var(--second-text-color);
-    font-family: inherit;
-    border: none;
-    /* border-radius: 10px; */
-  
-    cursor: pointer;
-    transition: background-color var(--main-hover-animation);
+    width: 200px;
   }
-  
-  .button:hover,
-  .button:focus {
-    background-color: var(--main-text-color);
+}
+
+@media screen and (min-width: 1400px) {
+  .button {
+    width: 400px;
   }
-  
-  .button__text {
-    margin-right: 10px;
-  }
+}

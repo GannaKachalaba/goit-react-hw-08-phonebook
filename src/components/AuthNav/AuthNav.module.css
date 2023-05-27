@@ -1,20 +1,28 @@
 .link {
-    display: inline-block;
-    text-decoration: none;
-    padding: 12px;
-    font-weight: 700;
-    color: #2a363b;
-  }
-  
-  .link.active {
-    color: pink;
-  }
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: 700;
+  color: #2a363b;
+}
 
+.text {
+  color: var(--accent-text-color);
+}
+
+.text:hover,
+.text:focus {
+  color: var(--main-text-color);
+}
+
+@media screen and (min-width: 320px) {
   .text {
-    color: green;
-    font-size: 30px;
-   }
+    font-size: 10px;
+  }
+}
 
-   .link.active {
-     background-color: var(--main-text-color);
-   }
+@media screen and (min-width: 768px) {
+  .text {
+    font-size: 20px;
+  }
+}

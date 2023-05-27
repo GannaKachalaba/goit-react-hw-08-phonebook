@@ -18,11 +18,10 @@ function ContactForm({ onClose }) {
   const onSubmitForm = e => {
     e.preventDefault();
 
-   
     const data = { name, number };
 
     if (
-     contacts.find(
+      contacts.find(
         contact => contact.name.toLowerCase() === name.toLowerCase()
       )
     ) {
@@ -30,8 +29,7 @@ function ContactForm({ onClose }) {
       return;
     }
 
-    addContact( data );
-    
+    addContact(data);
 
     reset();
     onClose();
@@ -82,5 +80,3 @@ ContactForm.propTypes = {
 };
 
 export default ContactForm;
-
-
