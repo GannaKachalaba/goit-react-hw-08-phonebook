@@ -20,8 +20,14 @@ export const RegisterForm = () => {
   return (
     <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
       <label className={css.label}>
-        Username
-        <input className={css.input} type="text" name="name" required maxlenght={30} />
+        Name
+        <input
+          className={css.input}
+          type="text"
+          name="name"
+          required
+          maxlenght={30}
+        />
       </label>
       <label className={css.label}>
         Email
@@ -29,7 +35,13 @@ export const RegisterForm = () => {
       </label>
       <label className={css.label}>
         Password
-        <input className={css.input} type="password" name="password" required minlenght={7} />
+        <input
+          className={css.input}
+          type="password"
+          name="password"
+          required
+          minlenght={7}
+        />
       </label>
       <button className={css.button} type="submit">
         <span className={css.button__text}>Register</span>
